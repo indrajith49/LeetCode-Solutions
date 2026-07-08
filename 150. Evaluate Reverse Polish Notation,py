@@ -1,0 +1,25 @@
+class Solution:
+    def evalRPN(self, tokens):
+        stack = []  # ← Use a meaningful name like 'stack'
+
+        for token in tokens:
+            if token == "+":
+                b = stack.pop()  # Pop second number
+                a = stack.pop()  # Pop first number
+                stack.append(a + b)
+            elif token == "-":
+                b = stack.pop()
+                a = stack.pop()
+                stack.append(a - b)
+            elif token == "*":
+                b = stack.pop()
+                a = stack.pop()
+                stack.append(a * b)
+            elif token == "/":
+                b = stack.pop()
+                a = stack.pop()
+                stack.append(int(a / b))  # Truncate toward zero
+            else:
+                stack.append(int(token))  # It's a number!
+
+        return stack[0]  # Final answer
