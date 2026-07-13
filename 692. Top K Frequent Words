@@ -1,0 +1,9 @@
+class Solution:
+    def topKFrequent(self, words: List[str], k: int) -> List[str]:
+        counter = Counter(words)
+        
+        # Sort ALL items by frequency descending, then alphabetically
+        sorted_items = sorted(counter.items(), key=lambda x: (-x[1], x[0]))
+        
+        # Take the first k items
+        return [word for word, _ in sorted_items[:k]]
