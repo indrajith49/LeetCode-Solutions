@@ -18,7 +18,7 @@ class Solution:
 
             result.append([nums1[i], nums2[j]])
 
-            if j+1< len(nums2):
-                heapq.heappush(heap, (nums1[i]+ nums2[j+1], i, j+1))
+            if j+1< len(nums2):# this part still isnt clear
+                heapq.heappush(heap, (nums1[i]+ nums2[j+1], i, j+1)) #this part still isnt clear
 
         return result
