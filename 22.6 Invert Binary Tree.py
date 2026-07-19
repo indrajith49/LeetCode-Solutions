@@ -15,6 +15,16 @@ class Solution:
         self.invertTree(root.right)
 
         return root
+
+1. Base Case: If the current node is empty (None), return None. There is nothing to invert.
+
+2. Swap Children: Swap the left and right children of the current node.
+
+3. Recurse Left: Call invertTree on the new left child (the original right child). This will invert the entire left subtree.
+
+4. Recurse Right: Call invertTree on the new right child (the original left child). This will invert the entire right subtree.
+
+5. Return the Root: After both subtrees are inverted, return the root of the tree.
 --------------------------------------------WITHOUT RECURSION--------------------------------------------
 class Solution:
     def invertTree(self, root):
