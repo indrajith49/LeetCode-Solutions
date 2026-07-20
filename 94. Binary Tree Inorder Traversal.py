@@ -17,4 +17,14 @@ class Solution:
 
         dfs(root)
         return result
-    
+
+---------------------------------------------------------ALTERNATIVE---------------------------------------------------------
+class Solution:
+    def inorderTraversal(self, root):
+        result = []
+        if not root:
+            return []
+        result.extend(self.inorderTraversal(root.left))  # Step 1: Go LEFT
+        result.append(root.val)                          # Step 2: Visit ROOT
+        result.extend(self.inorderTraversal(root.right)) # Step 3: Go RIGHT
+        return result
