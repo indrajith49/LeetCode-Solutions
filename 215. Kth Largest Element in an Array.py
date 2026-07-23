@@ -32,3 +32,9 @@ class Solution:
                 heapq.heappop(heap)
 
         return heap[0]
+--------------------------------------------CORE IDEA------------------------------------------------------------------------
+1. 1. we will return the heap[0] and before that we will make the list heaped and then keep only till the size of the heap is upto k. 
+2. For that at the very beginning, we will make the heap heaped so that the smallest element always stays at the very beginning. 
+3. If the size of the heap is greater than k we will pop from the left (the smallest element) and keep doing it till the size of the list is equal to k. 
+4. And return the heap[0] which will be the smallest element of that k-sized list. 
+
