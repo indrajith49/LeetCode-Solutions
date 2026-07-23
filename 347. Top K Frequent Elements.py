@@ -13,6 +13,26 @@ class Solution:
 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+
+----------------------------------------------CORE IDEA----------------------------------------------------------------
+1. Count Frequencies
+→ Use Counter(nums) to count how many times each number appears.
+
+2. Create an Empty Min-Heap
+→ heap = [] — this will store (freq, num) pairs.
+
+3. Push into Heap
+→ Loop through counter.items() and push (freq, num).
+→ Important: Store as (freq, num) because the heap sorts by the first element (frequency).
+
+4. Maintain Heap Size
+→ If len(heap) > k, pop the smallest frequency (heapq.heappop(heap)).
+→ This keeps only the k largest frequencies in the heap.
+
+5. Extract the Numbers
+→ Return only the numbers (not frequencies) using [num for freq, num in heap].
+
+
 import heapq
 from collections import Counter
 
