@@ -24,3 +24,24 @@ class Solution:
 # Test
 sol = Solution()
 print(sol.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+
+
+ALTERNATIVE -----------------------------------------------------------------------------------------
+
+class Solution:
+    def groupAnagrams(self, strs):
+
+        if not strs:
+            return  []
+
+        result = {}
+        for char in strs:
+            sorted_s = ''.join(sorted(char))
+            result[sorted_s] = result.get(sorted_s, []) + [char]
+
+        return list(result.values())
+
+
+
+        
+
