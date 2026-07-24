@@ -1,3 +1,8 @@
+---------------------------------------------------CORE IDEA------------------------------------------------------
+
+write core idea next time. today is 24/07. 
+
+
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         res = []
