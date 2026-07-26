@@ -1,3 +1,9 @@
+-------------------------------------CORE IDEA---------------------------------------------
+so the core idea is we will keep appending on our stack with the help of loop and if the token is any operator for example "*/+-" we will pop out from the stack and do the operation. we have to make sure that the operators come first before appending int(token)
+
+
+
+
 class Solution:
     def evalRPN(self, tokens):
         stack = []  # ← Use a meaningful name like 'stack'
