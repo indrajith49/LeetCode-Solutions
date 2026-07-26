@@ -1,3 +1,8 @@
+---------------------------------------------------CORE IDEA--------------------------------------------
+
+
+
+
 class Solution:
     def dailyTemperatures(self, temperatures):
 
