@@ -22,10 +22,10 @@ class Solution:
         max_area = 0
 
         while left<right:
-            area = right - left
+            width = right - left
             current_height = min(height[left], height[right])
 
-            max_area = max(max_area, area*current_height)
+            max_area = max(max_area, width*current_height)
 
             if height[left]<height[right]:
                 left+=1
