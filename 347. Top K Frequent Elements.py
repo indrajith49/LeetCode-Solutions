@@ -78,3 +78,24 @@ Part	What it means
 for freq, num in heap	"Go through each pair in heap. Call the first thing freq and the second thing num."
 num	"I only want the num part. Ignore freq."
 [ ... ]	"Put all those num parts into a new list."
+
+
+----------------------------------------------------------MORE OPTIMIZED----------------------------------------------------------
+
+import collections
+import heapq
+from collections import Counter
+class Solution:
+    def topKFrequent(self, nums, k):
+        count = Counter(nums)
+
+        heap = [(cnt, val) for val, cnt in count.items()]
+        heapq.heapify(heap)
+
+        while len(heap)>k:
+            heapq.heappop(heap)
+
+        return [val for cnt, val in heap]
+
+sol = Solution()
+print(sol.topKFrequent([1,1,1,2,2,2,3], 2))
