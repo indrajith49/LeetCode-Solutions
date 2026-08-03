@@ -1,3 +1,37 @@
+-------------------------------------CORE IDEA---------------------------------------
+1. Convert the list to a set → settings = set(nums)
+→ This gives us O(1) lookups so we can instantly check if a number exists.
+
+2. Loop through each number and find the START of a sequence
+→ Check: if num - 1 not in settings:
+→ If num - 1 does NOT exist, then num is the beginning of a new consecutive sequence.
+
+3. Count the length of the sequence
+→ Start length = 1 (the number itself).
+→ While num + length exists in the set, keep increasing length.
+→ Update the global longest with max(longest, length).
+
+4. Return the longest sequence length → return longest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -------------------------------Brute Force-------------------------------
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
