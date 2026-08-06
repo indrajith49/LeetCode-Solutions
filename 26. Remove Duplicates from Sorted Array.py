@@ -1,6 +1,9 @@
 ---------------------------------------------CORE IDEA-----------------------------------------------
 We move unique numbers forward by overwriting duplicates, and i + 1 gives us the count of unique numbers.
-#NEED MORE DETAILED BREAKDOWN PLEASE
+
+    again-------------------more precisely described below
+We are moving unique numbers to the front, and i tracks the position of the last unique number.
+So when we return, we add 1 to i because i is 0-indexed.
 
 
 -------------------------------------------USING TWO POINTER---------------------------------------------
