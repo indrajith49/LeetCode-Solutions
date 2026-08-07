@@ -1,3 +1,7 @@
+---------CORE IDEA IS THE DUTCH NATIONAL FLAG---------
+we will just swap but i still didnt understand why do i need to increment low+=1
+
+
 from typing import List
 
 class Solution:
