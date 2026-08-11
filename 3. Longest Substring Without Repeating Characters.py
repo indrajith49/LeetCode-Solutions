@@ -1,3 +1,6 @@
+---------------------------CORE IDEA-----------------------
+
+
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         # Edge case: empty string
