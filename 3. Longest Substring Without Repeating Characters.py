@@ -1,5 +1,9 @@
 ---------------------------CORE IDEA-----------------------
 
+We move through the string, keeping track of the last seen position of each character. 
+If we find a duplicate inside the current window,
+we move the left pointer to just after the first duplicate.
+
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
