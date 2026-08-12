@@ -1,3 +1,9 @@
+-----------------------------CORE IDEA------------------------------
+We use two pointers (left and right), both starting at 0. right expands the window by adding elements.
+While the sum of the window is >= target, we update the minimum length, 
+then shrink the window from the left by subtracting nums[left] and moving left forward.
+
+
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:  # target first, nums second        
         if not nums:
