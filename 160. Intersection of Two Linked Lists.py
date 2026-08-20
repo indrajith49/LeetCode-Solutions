@@ -1,4 +1,8 @@
+-----------------------------------CORE IDEA---------------------------
 
+
+
+#THERE IS ANOTHER BRUTE FORCE VERSION OF THIS WORKS KINDA SAME LIKE THISWS...
 class ListNode:
     def __init__(self, x):
         self.val = x
