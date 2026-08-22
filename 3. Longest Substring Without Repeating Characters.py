@@ -19,7 +19,7 @@ class Solution:
             char = s[right]
             
             # If char already seen and is inside current window
-            if char in seen and seen[char] >= left:
+            if char in seen and seen[char] >= left: #seen[char] is mainly the index of the current character? 
                 # Move left past the duplicate
                 left = seen[char] + 1
             
