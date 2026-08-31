@@ -1,8 +1,10 @@
 ---------------------------CORE IDEA-----------------------
 
-We move through the string, keeping track of the last seen position of each character. 
-If we find a duplicate inside the current window,
-we move the left pointer to just after the first duplicate.
+so the core idea is at first we will check if the the s is empty or not. 
+then we will make two pointer one will stay still until it is ordered to move and another will be moving inside a loop.
+then we will run a loop and then check if we have seen the current window previously by the help of a dictionary. 
+if we have seen this before then we will move our left pointer one step ahead else we will keep noting it down to the seen dictionary.
+and then calculate the max length.
 
 
 class Solution:
@@ -23,7 +25,7 @@ class Solution:
                 # Move left past the duplicate
                 left = seen[char] + 1
             
-            # Update last seen position
+            # note down the latest index
             seen[char] = right
             
             # Update max length
