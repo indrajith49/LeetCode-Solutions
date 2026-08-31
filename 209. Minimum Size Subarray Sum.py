@@ -17,10 +17,13 @@ class Solution:
             current_sum+=nums[right]
 
             while current_sum>=target:
-                min_value = min(min_value, right-left+1)
 
                 current_sum-=nums[left]
+                min_value = min(min_value, right-left+1)
+
                 left+=1
 
         return 0 if min_value == float('inf') else min_value
+        #we can also write return like  this -> return min_value if min_val!=float('inf') else 0
+
 
