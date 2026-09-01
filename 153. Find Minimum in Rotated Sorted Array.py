@@ -1,3 +1,16 @@
+-----------------------------------CORE IDEA--------------------------------
+
+1. Loop condition: `while l < r` (stop when `l == r`)
+2. Compute `mid`. Compare **`nums[mid] vs nums[r]`** (`nums[r]` is reliable reference, always in lower chunk)
+   - `if nums[mid] > nums[r]`: mid is inside big upper chunk. Minimum is to the right of mid → `l = mid + 1`
+   - `else`: subarray `[mid ... r]` is sorted. Minimum can be mid or left of mid → keep mid, set `r = mid`
+3. When `l == r`, this index holds minimum value → return `nums[l]`
+
+> 
+> Reference point: only use `nums[r]`.
+> Goal: **find pivot / smallest element**, no target.
+
+
 with edge case
 class Solution:
     def findMin(self, nums: List[int]) -> int:
