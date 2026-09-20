@@ -9,18 +9,20 @@ class Solution:
         if original_color == color:
             return image
 
+        
         def dfs(r, c):
-            # Stop if out of bounds OR pixel is not original color
-            if r < 0 or r >= rows or c < 0 or c >= cols or image[r][c] != original_color:
-                return
-            # paint this pixel
+            # ========== RECURSION BASE CASE (STOP RULE) ==========
+            if r < 0 or r >= rows or c < 0 or c >= cols or image[r][c] != original:
+                return  # stop! no more work for this cell
+
+            # ========== NORMAL WORK: if we did NOT stop, paint cell ==========
             image[r][c] = color
 
-            # visit 4 directions: down, up, right, left
-            dfs(r + 1, c)
-            dfs(r - 1, c)
-            dfs(r, c + 1)
-            dfs(r, c - 1)
+            # ========== RECURSIVE STEP: visit four neighbour cells ==========
+            dfs(r - 1, c)  # up
+            dfs(r + 1, c)  # down
+            dfs(r, c + 1)  # right
+            dfs(r, c - 1)  # left
 
         dfs(sr, sc)
         return image
