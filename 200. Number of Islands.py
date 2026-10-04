@@ -32,6 +32,6 @@ class Solution:
             for c in range(cols):
                 if grid[r][c] == "1":
                     count += 1
-                    dfs(r, c)
+                    dfs(r, c) #if we dont add this line it will go to every cell of the image and count all 1. but if we add call thisit will convert every 1 to 0 connected to the main 1
 
         return count
